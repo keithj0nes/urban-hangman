@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { Button, Letter, GuessLetter } from '../components';
 import {mainStyle} from "../assets/base";
+import words from '../assets/words.json'
 
 class Game extends Component {
 
@@ -12,13 +13,19 @@ class Game extends Component {
         letterRow1: 'qwertyuiop',
         letterRow2: 'asdfghjkl',
         letterRow3: 'zxcvbnm',
-        currentWord: 'keithe is the woman',
+        currentWord: '',
         userGuess: []
     }
 
     componentDidMount() {
+
         //get word
         // render word to words view (as this.state.currentWord)
+        const randomNumber = Math.floor(Math.random() * words.length )
+        const currentWord = words[randomNumber]
+        this.setState({
+            currentWord
+        })
     }
 
     handleUserGuess = (letter) => {
