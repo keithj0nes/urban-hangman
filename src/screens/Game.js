@@ -60,8 +60,9 @@ class Game extends Component {
 
                             const ourState = [...this.state.userGuess];
                             const isLetterGuessed = ourState.includes(letter)
+                            const correctGuess = this.state.currentWord.includes(letter)
 
-                            return <Letter key={letter} onPress={() => this.handleUserGuess(letter)} disabled={isLetterGuessed} title={letter} />
+                            return <Letter key={letter} onPress={() => this.handleUserGuess(letter)} correctGuess={correctGuess} disabled={isLetterGuessed} title={letter} />
                         })}
                     </View>
 
@@ -71,9 +72,10 @@ class Game extends Component {
 
                             const ourState = [...this.state.userGuess];
                             const isLetterGuessed = ourState.includes(letter)
+                            const correctGuess = this.state.currentWord.includes(letter)
 
 
-                            return <Letter key={letter} onPress={() => this.handleUserGuess(letter)} disabled={isLetterGuessed} title={letter} />
+                            return <Letter key={letter} onPress={() => this.handleUserGuess(letter)} correctGuess={correctGuess} disabled={isLetterGuessed} title={letter} />
                         })}
                     </View>
 
@@ -83,8 +85,9 @@ class Game extends Component {
 
                             const ourState = [...this.state.userGuess];
                             const isLetterGuessed = ourState.includes(letter)
+                            const correctGuess = this.state.currentWord.includes(letter)
 
-                            return <Letter key={letter} onPress={() => this.handleUserGuess(letter)} disabled={isLetterGuessed} title={letter} />
+                            return <Letter key={letter} onPress={() => this.handleUserGuess(letter)} correctGuess={correctGuess} disabled={isLetterGuessed} title={letter} />
                         })}
                     </View>
 
@@ -110,7 +113,7 @@ const styles = StyleSheet.create({
         // height: 100
     },
     words: {
-        backgroundColor: mainStyle.white,
+        backgroundColor: mainStyle.red,
         flex: 1,
         flexDirection: 'row',
         flexWrap: 'wrap',
