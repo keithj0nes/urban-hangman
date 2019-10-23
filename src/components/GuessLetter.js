@@ -17,8 +17,11 @@ const GuessLetter = ({title, isHidden}) => {
 
     return (
         <View style={[styles.container, noBorder]}>
-            {/*{isHidden && renderHidden()}*/}
+            <View style={{width: "150%"}}>
+
+            {isHidden && renderHidden()}
             <Text style={styles.letterText}>{title.toUpperCase()}</Text>
+            </View>
         </View>
     )
 }
@@ -32,7 +35,7 @@ const styles = StyleSheet.create({
         padding: getDimensions() === "iPhone5s" ? 3 : 5,
         backgroundColor: 'yellow',
         margin: 3,
-        marginVertical: 3,
+        // marginVertical: 3,
         borderBottomColor: 'black',
         borderBottomWidth: 5
     },
@@ -44,9 +47,11 @@ const styles = StyleSheet.create({
         position: 'absolute',
         zIndex: 100,
         backgroundColor: 'pink',
-        height: '50%',
-        padding: 8,
-
-        width: '215%'
+        height: '135%',
+        // padding: getDimensions() === "iPhone5s" ? 3 : 5,
+        bottom: 0,
+        // padding: 20,
+        margin: -5,
+        width: '115%'
     }
 })

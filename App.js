@@ -9,9 +9,11 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
 import ChooseDifficulty from './src/screens/ChooseDifficulty';
-import Game from './src/screens/Game';
+import Easy from './src/screens/Easy';
 import About from './src/screens/About';
 import { createStackNavigator, createAppContainer } from "react-navigation";
+import Medium from "./src/screens/Medium";
+import Hard from "./src/screens/Hard";
 
 
 
@@ -21,7 +23,13 @@ const App = createStackNavigator({
     screen: ChooseDifficulty
   },
   Game: {
-    screen: Game
+    screen: Easy
+  },
+  Medium: {
+    screen: Medium
+  },
+  Hard: {
+    screen: Hard
   },
   Abouts: {
     screen: About

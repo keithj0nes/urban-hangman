@@ -17,9 +17,9 @@ const ChooseDifficulty = (props) => {
             <View style={styles.buttonContainer}>
                 <Button title={'Easy'} onPress={() => props.navigation.navigate('Game')} />
                     <View style={styles.buttonMargin}/>
-                <Button title={'Medium'} onPress={() => props.navigation.navigate('Game')} />
+                <Button title={'Medium'} onPress={() => props.navigation.navigate('Medium')} />
                     <View style={styles.buttonMargin}/>
-                <Button title={'Hard'} onPress={() => props.navigation.navigate('Game')} />
+                <Button title={'Hard'} onPress={() => props.navigation.navigate('Hard')} />
             </View>
             <View style={styles.buttonMargin}/>
                 <Button inverted title={'?'} onPress={() => props.navigation.navigate('Abouts')} />
